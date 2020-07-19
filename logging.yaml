@@ -13,16 +13,16 @@ handlers:
     formatter: common
     level: INFO
     when: D
-    interval: 1
+    # interval: 1
     encoding: utf8
-    filename: "app.log"
+    filename: "logs/app.log"
     # suffix: "%Y-%m-%d.log"
     # 日志保留个数
     backupCount: 7
   console:    
     class : logging.StreamHandler
-    formatter: brief
-    level   : INFO
+    formatter: console
+    level   : DEBUG
     stream  : ext://sys.stdout
 loggers:
   main.business:
